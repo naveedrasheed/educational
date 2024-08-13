@@ -1,0 +1,6 @@
+V3 3
+FL H:/6S/add_lab/register/register.vhd 2009/12/31.12:53:32 I.24
+EN work/reg 1262248678             FL H:/6S/add_lab/register/register.vhd \
+      PB ieee/std_logic_1164 1131108373 PB ieee/std_logic_arith 1131108375 \
+      PB ieee/STD_LOGIC_UNSIGNED 1131108379
+AR work/reg/Behavioral 1262248679  FL H:/6S/add_lab/register/register.vhd EN work/reg 1262248678

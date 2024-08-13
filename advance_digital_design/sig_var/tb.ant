@@ -1,0 +1,156 @@
+--------------------------------------------------------------------------------
+-- Copyright (c) 1995-2003 Xilinx, Inc.
+-- All Right Reserved.
+--------------------------------------------------------------------------------
+--   ____  ____ 
+--  /   /\/   / 
+-- /___/  \  /    Vendor: Xilinx 
+-- \   \   \/     Version : 8.1i
+--  \   \         Application : ISE
+--  /   /         Filename : tb.ant
+-- /___/   /\     Timestamp : Tue Dec 29 01:49:07 2009
+-- \   \  /  \ 
+--  \___\/\___\ 
+--
+--Command: 
+--Design Name: tb
+--Device: Xilinx
+--
+
+library ieee;
+use ieee.std_logic_1164.all;
+USE IEEE.STD_LOGIC_TEXTIO.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE STD.TEXTIO.ALL;
+
+ENTITY tb IS
+END tb;
+
+ARCHITECTURE testbench_arch OF tb IS
+    FILE RESULTS: TEXT OPEN WRITE_MODE IS "H:\6S\add_lab\sig_var\tb.ano";
+
+    COMPONENT sig_var
+        PORT (
+            d1 : In std_logic;
+            d2 : In std_logic;
+            d3 : In std_logic;
+            res1 : Out std_logic;
+            res2 : Out std_logic
+        );
+    END COMPONENT;
+
+    SIGNAL d1 : std_logic := '0';
+    SIGNAL d2 : std_logic := '1';
+    SIGNAL d3 : std_logic := '0';
+    SIGNAL res1 : std_logic := '0';
+    SIGNAL res2 : std_logic := '0';
+
+    SHARED VARIABLE TX_ERROR : INTEGER := 0;
+    SHARED VARIABLE TX_OUT : LINE;
+
+    BEGIN
+        UUT : sig_var
+        PORT MAP (
+            d1 => d1,
+            d2 => d2,
+            d3 => d3,
+            res1 => res1,
+            res2 => res2
+        );
+
+        PROCESS    -- Annotation process
+            VARIABLE TX_TIME : INTEGER := 0;
+
+            PROCEDURE ANNOTATE_res1(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", res1, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, res1);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_res2(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", res2, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, res2);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+        BEGIN
+            WAIT for 1 fs;
+            ANNOTATE_res1(0);
+            ANNOTATE_res2(0);
+            ANNO_LOOP : LOOP
+                WAIT for 50 ns;
+                TX_TIME := TX_TIME + 50;
+                ANNOTATE_res1(TX_TIME);
+                ANNOTATE_res2(TX_TIME);
+                WAIT for 50 ns;
+                TX_TIME := TX_TIME + 50;
+            END LOOP ANNO_LOOP;
+        END PROCESS;
+
+        PROCESS
+            BEGIN
+                -- -------------  Current Time:  100ns
+                WAIT FOR 100 ns;
+                d1 <= '1';
+                d3 <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  300ns
+                WAIT FOR 200 ns;
+                d1 <= '0';
+                d3 <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  600ns
+                WAIT FOR 300 ns;
+                d3 <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  800ns
+                WAIT FOR 200 ns;
+                d3 <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  1000ns
+                WAIT FOR 200 ns;
+                d1 <= '1';
+                d3 <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  1200ns
+                WAIT FOR 200 ns;
+                d1 <= '0';
+                d3 <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  1800ns
+                WAIT FOR 600 ns;
+                d3 <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  1900ns
+                WAIT FOR 100 ns;
+                d3 <= '0';
+                WAIT FOR 100 ns;
+
+                STD.TEXTIO.write(TX_OUT, string'("Total[]"));
+                STD.TEXTIO.writeline(RESULTS, TX_OUT);
+                ASSERT (FALSE) REPORT
+                    "Success! Simulation for annotation completed"
+                    SEVERITY FAILURE;
+            END PROCESS;
+
+    END testbench_arch;
+

@@ -1,0 +1,3 @@
+MODULE tb
+SUBMODULE melay_fsm
+INSTANCE UUT

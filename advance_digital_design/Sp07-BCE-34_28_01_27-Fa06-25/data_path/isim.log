@@ -1,0 +1,9 @@
+ command line:
+   ./tb_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  1142
+ERROR:Simulator:29 - at 0 ns : On entity block tb/UUT/exe_s/ : width 6 of formal
+   signal alu_op is not equal to width 2 of actual signal alu_op
+
+ERROR:Simulator:29 - at 0 ns : 

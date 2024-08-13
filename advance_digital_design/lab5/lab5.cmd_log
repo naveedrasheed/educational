@@ -1,0 +1,2 @@
+xst -ise "C:/Xilinx/lab5/lab5" -intstyle ise -ifn lab5.xst -ofn lab5.syr
+xst -ise "C:/Xilinx/lab5/lab5" -intstyle ise -ifn lab5.xst -ofn lab5.syr

@@ -1,0 +1,5 @@
+V3 3
+FL H:/6S/add_lab/sig_var/sig_var.vhd 2009/12/06.23:36:46 I.24
+EN work/sig_var 1262032422         FL H:/6S/add_lab/sig_var/sig_var.vhd \
+      PB ieee/std_logic_1164 1131108373
+AR work/sig_var/behv 1262032423    FL H:/6S/add_lab/sig_var/sig_var.vhd EN work/sig_var 1262032422

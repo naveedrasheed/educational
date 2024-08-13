@@ -1,0 +1,6 @@
+AR reg behavioral H:/6S/add_lab/r_f_c/register.vhd sub00/vhpl01 1262247568
+AR tb testbench_arch H:/6S/add_lab/r_f_c/tb.vhw sub00/vhpl05 1262247927
+EN tb NULL H:/6S/add_lab/r_f_c/tb.vhw sub00/vhpl04 1262247926
+EN r_f NULL H:/6S/add_lab/r_f_c/r_f.vhd sub00/vhpl02 1262247924
+AR r_f behavioral H:/6S/add_lab/r_f_c/r_f.vhd sub00/vhpl03 1262247925
+EN reg NULL H:/6S/add_lab/r_f_c/register.vhd sub00/vhpl00 1262247567

@@ -1,0 +1,29 @@
+ command line:
+   ./tb_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  1415
+
+Sun Dec 06 22:17:30 2009
+
+Total Line Count = 819
+
+ Elaboration time 0 sec.
+
+ Estimate current memory usage 44.843 Meg. 
+
+ Total signals 31
+ Total nets 18
+ Total signal drivers 11
+ Total blocks 11
+ Total primitive blocks 4
+ Total processes 9
+ntrace select -o on -n /tb/a 
+ntrace select -o on -n /tb/b 
+ntrace select -o on -n /tb/cin 
+ntrace select -o on -n /tb/sum 
+ntrace select -o on -n /tb/carry 
+ntrace start 
+run all 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

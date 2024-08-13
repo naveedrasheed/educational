@@ -1,0 +1,5 @@
+V3 4
+FL H:/6S/add_lab/mux/mux.vhd 2009/12/06.23:37:44 I.24
+EN isim_temp/Mux 1262035194        FL H:/6S/add_lab/mux/mux.vhd PB ieee/std_logic_1164 1132105529
+AR isim_temp/Mux/behv1 1262035195  FL H:/6S/add_lab/mux/mux.vhd EN isim_temp/Mux 1262035194
+AR isim_temp/Mux/behv2 1262035196  FL H:/6S/add_lab/mux/mux.vhd EN isim_temp/Mux 1262035194

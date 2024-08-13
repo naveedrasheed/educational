@@ -1,0 +1,4 @@
+AR g_adder behavioral H:/6S/add_lab/g_adder/g_adder.vhd sub00/vhpl03 1260121108
+AR alu_nvd behavioral H:/6S/add_lab/alu_nvd/alu_nvd.vhd sub00/vhpl01 1262275218
+EN alu_nvd NULL H:/6S/add_lab/alu_nvd/alu_nvd.vhd sub00/vhpl00 1262275217
+EN g_adder NULL H:/6S/add_lab/g_adder/g_adder.vhd sub00/vhpl02 1260121107

@@ -1,0 +1,75 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2003 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.1i
+//  \   \         Application : ISE
+//  /   /         Filename : tbb.ant
+// /___/   /\     Timestamp : Thu May 07 12:08:56 2009
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: tbb
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module tbb;
+    reg read = 1'b0;
+    reg write = 1'b0;
+    reg [31:0] pc = 32'b00000000000000000000000000000000;
+    reg [31:0] data_in = 32'b00000000000000000000000000000000;
+    wire [31:0] data_out;
+    reg clk = 1'b0;
+
+
+    memory UUT (
+        .read(read),
+        .write(write),
+        .pc(pc),
+        .data_in(data_in),
+        .data_out(data_out),
+        .clk(clk));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin    // Annotation process
+        #0;
+        ANNOTATE_data_out;
+        forever begin
+            #5;
+            ANNOTATE_data_out;
+            #5;
+        end
+    end
+
+    initial begin  // Open the annotations file...
+        TX_FILE = $fopen("C:\\Xilinx\\memory\\tbb.ano");
+        #1000 // Final time:  1000 ns
+        $display("Success! Annotation Simulation Complete.");
+        $fdisplay(TX_FILE, "Total[%d]", TX_ERROR);
+        $fclose(TX_FILE);
+        $finish;
+    end
+
+    initial begin
+        // -------------  Current Time:  1000ns
+        #1000;
+        read = 1'b0;
+    end
+
+    task ANNOTATE_data_out;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,data_out,%b]", $time, data_out);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+endmodule
+

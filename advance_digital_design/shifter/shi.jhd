@@ -1,0 +1,3 @@
+MODULE shi
+SUBMODULE shift_reg
+INSTANCE UUT

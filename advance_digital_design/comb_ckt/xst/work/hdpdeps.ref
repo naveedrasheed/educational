@@ -1,0 +1,12 @@
+V3 10
+FL H:/6S/add_lab/comb_ckt/comb_ckt.vhd 2009/12/06.23:34:43 I.24
+EN work/OR_GATE 1262065393         FL H:/6S/add_lab/comb_ckt/comb_ckt.vhd \
+      PB ieee/std_logic_1164 1131108373
+AR work/OR_GATE/behv 1262065394    FL H:/6S/add_lab/comb_ckt/comb_ckt.vhd EN work/OR_GATE 1262065393
+EN work/AND_GATE 1262065395        FL H:/6S/add_lab/comb_ckt/comb_ckt.vhd \
+      PB ieee/std_logic_1164 1131108373
+AR work/AND_GATE/behv 1262065396   FL H:/6S/add_lab/comb_ckt/comb_ckt.vhd EN work/AND_GATE 1262065395
+EN work/comb_ckt 1262065397        FL H:/6S/add_lab/comb_ckt/comb_ckt.vhd \
+      PB ieee/std_logic_1164 1131108373 LB work
+AR work/comb_ckt/struct 1262065398 FL H:/6S/add_lab/comb_ckt/comb_ckt.vhd EN work/comb_ckt 1262065397 \
+      CP AND_GATE       CP OR_GATE

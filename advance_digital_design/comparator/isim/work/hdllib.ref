@@ -1,0 +1,4 @@
+AR tb testbench_arch H:/6S/add_lab/comparator/tb.vhw sub00/vhpl03 1262065933
+EN tb NULL H:/6S/add_lab/comparator/tb.vhw sub00/vhpl02 1262065932
+EN comparator NULL H:/6S/add_lab/comparator/comparator.vhd sub00/vhpl00 1262065930
+AR comparator behv H:/6S/add_lab/comparator/comparator.vhd sub00/vhpl01 1262065931

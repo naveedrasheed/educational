@@ -1,0 +1,8 @@
+AR or_gate behv H:/6S/add_lab/comb_ckt/comb_ckt.vhd sub00/vhpl01 1262065424
+AR and_gate behv H:/6S/add_lab/comb_ckt/comb_ckt.vhd sub00/vhpl03 1262065426
+AR tb testbench_arch H:/6S/add_lab/comb_ckt/tb.vhw sub00/vhpl07 1262065430
+EN tb NULL H:/6S/add_lab/comb_ckt/tb.vhw sub00/vhpl06 1262065429
+AR comb_ckt struct H:/6S/add_lab/comb_ckt/comb_ckt.vhd sub00/vhpl05 1262065428
+EN or_gate NULL H:/6S/add_lab/comb_ckt/comb_ckt.vhd sub00/vhpl00 1262065423
+EN comb_ckt NULL H:/6S/add_lab/comb_ckt/comb_ckt.vhd sub00/vhpl04 1262065427
+EN and_gate NULL H:/6S/add_lab/comb_ckt/comb_ckt.vhd sub00/vhpl02 1262065425

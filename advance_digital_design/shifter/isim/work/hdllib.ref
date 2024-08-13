@@ -1,0 +1,4 @@
+AR tb testbench_arch H:/6S/add_lab/shifter/tb.vhw sub00/vhpl03 1262034688
+EN tb NULL H:/6S/add_lab/shifter/tb.vhw sub00/vhpl02 1262034687
+AR shift_reg behv H:/6S/add_lab/shifter/shifter.vhd sub00/vhpl01 1262034361
+EN shift_reg NULL H:/6S/add_lab/shifter/shifter.vhd sub00/vhpl00 1262034360

@@ -1,0 +1,3 @@
+MODULE tb
+SUBMODULE half_adder
+INSTANCE UUT

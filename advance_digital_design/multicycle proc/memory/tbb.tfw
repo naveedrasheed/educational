@@ -1,0 +1,75 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2003 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.1i
+//  \   \         Application : ISE
+//  /   /         Filename : tbb.tfw
+// /___/   /\     Timestamp : Thu May 07 12:08:56 2009
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: tbb
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module tbb;
+    reg read = 1'b0;
+    reg write = 1'b0;
+    reg [31:0] pc = 32'b00000000000000000000000000000000;
+    reg [31:0] data_in = 32'b00000000000000000000000000000000;
+    wire [31:0] data_out;
+    reg clk = 1'b0;
+
+
+    memory UUT (
+        .read(read),
+        .write(write),
+        .pc(pc),
+        .data_in(data_in),
+        .data_out(data_out),
+        .clk(clk));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin  // Open the results file...
+        TX_FILE = $fopen("results.txt");
+        #1000 // Final time:  1000 ns
+        if (TX_ERROR == 0) begin
+            $display("No errors or warnings.");
+            $fdisplay(TX_FILE, "No errors or warnings.");
+        end else begin
+            $display("%d errors found in simulation.", TX_ERROR);
+            $fdisplay(TX_FILE, "%d errors found in simulation.", TX_ERROR);
+        end
+        $fclose(TX_FILE);
+        $stop;
+    end
+
+    initial begin
+        // -------------  Current Time:  1000ns
+        #1000;
+        read = 1'b0;
+    end
+
+    task CHECK_data_out;
+        input [31:0] NEXT_data_out;
+
+        #0 begin
+            if (NEXT_data_out !== data_out) begin
+                $display("Error at time=%dns data_out=%b, expected=%b", $time, data_out, NEXT_data_out);
+                $fdisplay(TX_FILE, "Error at time=%dns data_out=%b, expected=%b", $time, data_out, NEXT_data_out);
+                $fflush(TX_FILE);
+                TX_ERROR = TX_ERROR + 1;
+            end
+        end
+    endtask
+
+endmodule
+

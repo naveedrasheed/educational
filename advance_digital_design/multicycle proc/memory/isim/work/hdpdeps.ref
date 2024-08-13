@@ -1,0 +1,7 @@
+V3 7
+FL $XILINX/memory/memory.v 2009/05/07.12:12:15 I.24
+MO work/memory          FL $XILINX/memory/memory.v
+FL $XILINX/verilog/src/glbl.v 2005/11/16.15:34:44 I.24
+MO work/glbl            FL $XILINX/verilog/src/glbl.v
+FL $XILINX/memory/tbbb.tfw 2009/05/07.12:12:16 I.24
+MO work/tbbb            FL $XILINX/memory/tbbb.tfw MI memory

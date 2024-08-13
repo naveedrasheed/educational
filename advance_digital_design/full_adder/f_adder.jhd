@@ -1,0 +1,3 @@
+MODULE f_adder
+SUBMODULE full_adder
+INSTANCE UUT

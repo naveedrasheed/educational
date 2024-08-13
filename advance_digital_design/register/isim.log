@@ -1,0 +1,29 @@
+ command line:
+   ./kk_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  2886
+
+Thu Dec 31 13:38:13 2009
+
+Total Line Count = 757
+
+ Elaboration time 0 sec.
+
+ Estimate current memory usage 44.7447 Meg. 
+
+ Total signals 11
+ Total nets 27
+ Total signal drivers 6
+ Total blocks 7
+ Total primitive blocks 1
+ Total processes 4
+ntrace select -o on -n /kk/i 
+ntrace select -o on -n /kk/load 
+ntrace select -o on -n /kk/clock 
+ntrace select -o on -n /kk/clear 
+ntrace select -o on -n /kk/q 
+ntrace start 
+run all 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

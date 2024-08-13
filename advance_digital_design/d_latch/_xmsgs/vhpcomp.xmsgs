@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLParsers" num="3340" delta="unknown" >Project file &quot;<arg fmt="%s" index="1">d_latch_gen.prj</arg>&quot; names two source files, <arg fmt="%s" index="2">C:/Xilinx/bcesp07/d_latch/d_latch.ant</arg> and <arg fmt="%s" index="3">C:/Xilinx/bcesp07/d_latch/d_latch.vhd</arg>, that both define the same primary unit, <arg fmt="%s" index="4">work/d_latch</arg>
+</msg>
+
+</messages>

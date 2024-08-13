@@ -1,0 +1,3 @@
+MODULE tb
+SUBMODULE sig_var
+INSTANCE UUT

@@ -1,0 +1,3 @@
+vhdl isim_temp "H:/6S/add_lab/full_adder/full_adder.vhd"
+vhdl isim_temp "H:/6S/add_lab/g_adder/g_adder.vhd"
+vhdl isim_temp "alu_nvd.vhd"

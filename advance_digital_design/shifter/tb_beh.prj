@@ -1,0 +1,2 @@
+vhdl work "shifter.vhd"
+vhdl work "tb.vhw"

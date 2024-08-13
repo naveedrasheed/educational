@@ -1,0 +1,6 @@
+V3 3
+FL H:/6S/add_lab/shifter/shifter.vhd 2009/12/06.23:38:25 I.24
+EN isim_temp/shift_reg 1262034248  FL H:/6S/add_lab/shifter/shifter.vhd \
+      PB ieee/std_logic_1164 1132105529
+AR isim_temp/shift_reg/behv 1262034249 FL H:/6S/add_lab/shifter/shifter.vhd \
+      EN isim_temp/shift_reg 1262034248

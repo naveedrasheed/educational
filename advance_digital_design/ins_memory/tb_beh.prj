@@ -1,0 +1,2 @@
+vhdl work "ins_memory.vhd"
+vhdl work "tb.vhw"

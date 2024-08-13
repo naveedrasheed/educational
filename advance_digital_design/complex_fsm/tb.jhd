@@ -1,0 +1,3 @@
+MODULE tb
+SUBMODULE complex_fsm
+INSTANCE UUT

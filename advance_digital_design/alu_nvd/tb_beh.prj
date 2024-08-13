@@ -1,0 +1,4 @@
+vhdl work "H:/6S/add_lab/full_adder/full_adder.vhd"
+vhdl work "H:/6S/add_lab/g_adder/g_adder.vhd"
+vhdl work "alu_nvd.vhd"
+vhdl work "tb.vhw"

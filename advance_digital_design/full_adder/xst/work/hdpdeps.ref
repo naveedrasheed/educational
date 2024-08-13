@@ -1,0 +1,7 @@
+V3 3
+FL $XILINX/bcesp07/full_adder/full_adder.vhd 2009/10/02.16:55:39 I.24
+EN work/full_adder 1254485435      FL $XILINX/bcesp07/full_adder/full_adder.vhd \
+      PB ieee/std_logic_1164 1131108373 PB ieee/std_logic_arith 1131108375 \
+      PB ieee/STD_LOGIC_UNSIGNED 1131108379
+AR work/full_adder/Behavioral 1254485436 FL $XILINX/bcesp07/full_adder/full_adder.vhd \
+      EN work/full_adder 1254485435

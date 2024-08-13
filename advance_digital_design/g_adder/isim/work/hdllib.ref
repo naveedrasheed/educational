@@ -1,0 +1,6 @@
+EN tb NULL H:/6S/add_lab/g_adder/tb.vhw sub00/vhpl04 1260119850
+AR tb testbench_arch H:/6S/add_lab/g_adder/tb.vhw sub00/vhpl05 1260119851
+AR full_adder behavioral H:/6S/add_lab/full_adder/full_adder.vhd sub00/vhpl01 1260119710
+EN full_adder NULL H:/6S/add_lab/full_adder/full_adder.vhd sub00/vhpl00 1260119709
+AR g_adder behavioral H:/6S/add_lab/g_adder/g_adder.vhd sub00/vhpl03 1260119735
+EN g_adder NULL H:/6S/add_lab/g_adder/g_adder.vhd sub00/vhpl02 1260119734

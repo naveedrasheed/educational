@@ -1,0 +1,4 @@
+EN f_adder NULL C:/Xilinx/bcesp07/full_adder/f_adder.vhw sub00/vhpl02 1254485465
+AR full_adder behavioral C:/Xilinx/bcesp07/full_adder/full_adder.vhd sub00/vhpl01 1254485038
+EN full_adder NULL C:/Xilinx/bcesp07/full_adder/full_adder.vhd sub00/vhpl00 1254485037
+AR f_adder testbench_arch C:/Xilinx/bcesp07/full_adder/f_adder.vhw sub00/vhpl03 1254485466

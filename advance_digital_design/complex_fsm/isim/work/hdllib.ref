@@ -1,0 +1,4 @@
+AR complex_fsm behavioral H:/6S/add_lab/complex_fsm/complex_fsm.vhd sub00/vhpl01 1262065547
+AR tb testbench_arch H:/6S/add_lab/complex_fsm/tb.vhw sub00/vhpl03 1262065549
+EN tb NULL H:/6S/add_lab/complex_fsm/tb.vhw sub00/vhpl02 1262065548
+EN complex_fsm NULL H:/6S/add_lab/complex_fsm/complex_fsm.vhd sub00/vhpl00 1262065546

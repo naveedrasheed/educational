@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="753" delta="unknown" >&quot;<arg fmt="%s" index="1">H:/6S/add_lab/alu_nvd/alu_nvd.vhd</arg>&quot; line <arg fmt="%d" index="2">61</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">carry</arg>&apos; of component &apos;<arg fmt="%s" index="4">g_adder</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="unknown" >&quot;<arg fmt="%s" index="1">H:/6S/add_lab/alu_nvd/alu_nvd.vhd</arg>&quot; line <arg fmt="%d" index="2">62</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">carry</arg>&apos; of component &apos;<arg fmt="%s" index="4">g_adder</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="766" delta="unknown" >&quot;<arg fmt="%s" index="1">H:/6S/add_lab/g_adder/g_adder.vhd</arg>&quot; line <arg fmt="%d" index="2">56</arg>: Generating a Black Box for component &lt;<arg fmt="%s" index="3">full_adder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="766" delta="unknown" >&quot;<arg fmt="%s" index="1">H:/6S/add_lab/g_adder/g_adder.vhd</arg>&quot; line <arg fmt="%d" index="2">59</arg>: Generating a Black Box for component &lt;<arg fmt="%s" index="3">full_adder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="766" delta="unknown" >&quot;<arg fmt="%s" index="1">H:/6S/add_lab/g_adder/g_adder.vhd</arg>&quot; line <arg fmt="%d" index="2">62</arg>: Generating a Black Box for component &lt;<arg fmt="%s" index="3">full_adder</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">c_in&lt;0&gt;</arg>&gt; is never used or assigned.
+</msg>
+
+</messages>

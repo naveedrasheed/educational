@@ -1,0 +1,105 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2003 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.1i
+//  \   \         Application : ISE
+//  /   /         Filename : tbbb.ant
+// /___/   /\     Timestamp : Thu May 07 12:12:16 2009
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: tbbb
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module tbbb;
+    reg read = 1'b0;
+    reg write = 1'b0;
+    reg [31:0] pc = 32'b00000000000000000000000000000000;
+    reg [31:0] data_in = 32'b00000000000000000000000000000000;
+    wire [31:0] data_out;
+    reg clk = 1'b0;
+
+    parameter PERIOD = 200;
+    parameter real DUTY_CYCLE = 0.5;
+    parameter OFFSET = 0;
+
+    initial    // Clock process for clk
+    begin
+        #OFFSET;
+        forever
+        begin
+            clk = 1'b0;
+            #(PERIOD-(PERIOD*DUTY_CYCLE)) clk = 1'b1;
+            #(PERIOD*DUTY_CYCLE);
+        end
+    end
+
+    memory UUT (
+        .read(read),
+        .write(write),
+        .pc(pc),
+        .data_in(data_in),
+        .data_out(data_out),
+        .clk(clk));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin    // Annotation process for clock clk
+        #0;
+        ANNOTATE_data_out;
+        #OFFSET;
+        forever begin
+            #115;
+            ANNOTATE_data_out;
+            #85;
+        end
+    end
+
+    initial begin  // Open the annotations file...
+        TX_FILE = $fopen("C:\\Xilinx\\memory\\tbbb.ano");
+        #100200 // Final time:  100200 ns
+        $display("Success! Annotation Simulation Complete.");
+        $fdisplay(TX_FILE, "Total[%d]", TX_ERROR);
+        $fclose(TX_FILE);
+        $finish;
+    end
+
+    initial begin
+        // -------------  Current Time:  85ns
+        #85;
+        write = 1'b1;
+        pc = 32'b00000000000000000000000000000001;
+        data_in = 32'b00000000000000000000000000000010;
+        // -------------------------------------
+        // -------------  Current Time:  685ns
+        #600;
+        write = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  885ns
+        #200;
+        read = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  1285ns
+        #400;
+        read = 1'b0;
+        // -------------------------------------
+    end
+
+    task ANNOTATE_data_out;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,data_out,%b]", $time, data_out);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+endmodule
+

@@ -1,0 +1,4 @@
+AR h_adder testbench_arch C:/Xilinx/half_adder/h_adder.vhw sub00/vhpl03 1254483162
+EN half_adder NULL C:/Xilinx/half_adder/half_adder.vhd sub00/vhpl00 1254483159
+AR half_adder behavioral C:/Xilinx/half_adder/half_adder.vhd sub00/vhpl01 1254483160
+EN h_adder NULL C:/Xilinx/half_adder/h_adder.vhw sub00/vhpl02 1254483161

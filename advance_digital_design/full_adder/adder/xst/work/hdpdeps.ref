@@ -1,0 +1,7 @@
+V3 3
+FL $XILINX/bcesp07/adder/half_adder.vhd 2009/10/02.16:28:21 I.24
+EN work/half_adder 1254482917      FL $XILINX/bcesp07/adder/half_adder.vhd \
+      PB ieee/std_logic_1164 1131108373 PB ieee/std_logic_arith 1131108375 \
+      PB ieee/STD_LOGIC_UNSIGNED 1131108379
+AR work/half_adder/Behavioral 1254482918 FL $XILINX/bcesp07/adder/half_adder.vhd \
+      EN work/half_adder 1254482917

@@ -1,0 +1,27 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.1i
+//  \   \         Application : sch2verilog
+//  /   /         Filename : f_adder.vf
+// /___/   /\     Timestamp : 10/06/2009 01:20:07
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\bin\nt\sch2verilog.exe -intstyle ise -family spartan2 -w H:/6S/add_lab/full_adder/f_adder.sch f_adder.vf
+//Design Name: f_adder
+//Device: spartan2
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module f_adder();
+
+   
+   
+endmodule

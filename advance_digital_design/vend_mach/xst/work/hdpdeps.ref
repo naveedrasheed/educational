@@ -1,0 +1,6 @@
+V3 3
+FL H:/6S/add_lab/vend_mach/vending.vhd 2009/12/16.01:58:25 I.24
+EN work/vending 1262276419         FL H:/6S/add_lab/vend_mach/vending.vhd \
+      PB ieee/std_logic_1164 1131108373 PB ieee/std_logic_arith 1131108375 \
+      PB ieee/STD_LOGIC_UNSIGNED 1131108379
+AR work/vending/Behavioral 1262276420 FL H:/6S/add_lab/vend_mach/vending.vhd EN work/vending 1262276419

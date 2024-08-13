@@ -1,0 +1,4 @@
+AR tb testbench_arch H:/6S/add_lab/sig_var/tb.vhw sub00/vhpl03 1262033354
+EN tb NULL H:/6S/add_lab/sig_var/tb.vhw sub00/vhpl02 1262033353
+EN sig_var NULL H:/6S/add_lab/sig_var/sig_var.vhd sub00/vhpl00 1261971814
+AR sig_var behv H:/6S/add_lab/sig_var/sig_var.vhd sub00/vhpl01 1261971815

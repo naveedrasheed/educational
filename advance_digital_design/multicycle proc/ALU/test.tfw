@@ -1,0 +1,107 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2003 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.1i
+//  \   \         Application : ISE
+//  /   /         Filename : test.tfw
+// /___/   /\     Timestamp : Thu May 07 12:57:16 2009
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: test
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module test;
+    reg clk = 1'b0;
+    reg [31:0] alu_scrA = 32'b00000000000000000000000000000000;
+    reg [31:0] alu_scrB = 32'b00000000000000000000000000000000;
+    reg [1:0] aluctrl = 2'b00;
+    wire [31:0] alu_result;
+    wire zero;
+
+    parameter PERIOD = 200;
+    parameter real DUTY_CYCLE = 0.5;
+    parameter OFFSET = 0;
+
+    initial    // Clock process for clk
+    begin
+        #OFFSET;
+        forever
+        begin
+            clk = 1'b0;
+            #(PERIOD-(PERIOD*DUTY_CYCLE)) clk = 1'b1;
+            #(PERIOD*DUTY_CYCLE);
+        end
+    end
+
+    ALU UUT (
+        .clk(clk),
+        .alu_scrA(alu_scrA),
+        .alu_scrB(alu_scrB),
+        .aluctrl(aluctrl),
+        .alu_result(alu_result),
+        .zero(zero));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin  // Open the results file...
+        TX_FILE = $fopen("results.txt");
+        #1200 // Final time:  1200 ns
+        if (TX_ERROR == 0) begin
+            $display("No errors or warnings.");
+            $fdisplay(TX_FILE, "No errors or warnings.");
+        end else begin
+            $display("%d errors found in simulation.", TX_ERROR);
+            $fdisplay(TX_FILE, "%d errors found in simulation.", TX_ERROR);
+        end
+        $fclose(TX_FILE);
+        $stop;
+    end
+
+    initial begin
+        // -------------  Current Time:  85ns
+        #85;
+        alu_scrA = 32'b00000000000000000000000000000101;
+        aluctrl = 2'b11;
+        // -------------------------------------
+        // -------------  Current Time:  285ns
+        #200;
+        alu_scrB = 32'b00000000000000000000000000000100;
+        // -------------------------------------
+    end
+
+    task CHECK_alu_result;
+        input [31:0] NEXT_alu_result;
+
+        #0 begin
+            if (NEXT_alu_result !== alu_result) begin
+                $display("Error at time=%dns alu_result=%b, expected=%b", $time, alu_result, NEXT_alu_result);
+                $fdisplay(TX_FILE, "Error at time=%dns alu_result=%b, expected=%b", $time, alu_result, NEXT_alu_result);
+                $fflush(TX_FILE);
+                TX_ERROR = TX_ERROR + 1;
+            end
+        end
+    endtask
+    task CHECK_zero;
+        input NEXT_zero;
+
+        #0 begin
+            if (NEXT_zero !== zero) begin
+                $display("Error at time=%dns zero=%b, expected=%b", $time, zero, NEXT_zero);
+                $fdisplay(TX_FILE, "Error at time=%dns zero=%b, expected=%b", $time, zero, NEXT_zero);
+                $fflush(TX_FILE);
+                TX_ERROR = TX_ERROR + 1;
+            end
+        end
+    endtask
+
+endmodule
+

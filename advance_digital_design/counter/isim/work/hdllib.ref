@@ -1,0 +1,4 @@
+AR counter behv H:/6S/add_lab/counter/counter.vhd sub00/vhpl01 1262065651
+AR tb testbench_arch H:/6S/add_lab/counter/tb.vhw sub00/vhpl03 1262065781
+EN tb NULL H:/6S/add_lab/counter/tb.vhw sub00/vhpl02 1262065780
+EN counter NULL H:/6S/add_lab/counter/counter.vhd sub00/vhpl00 1262065650

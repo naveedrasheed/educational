@@ -1,0 +1,3 @@
+MODULE shifter
+SUBMODULE shift_reg
+INSTANCE UUT

@@ -1,0 +1,7 @@
+V3 3
+FL "D:/6th semister/adld/add_lab/vend/vending.vhd" 2010/01/11.12:12:11 I.24
+EN work/vending 1263203676         FL "D:/6th semister/adld/add_lab/vend/vending.vhd" \
+      PB ieee/std_logic_1164 1131108373 PB ieee/std_logic_arith 1131108375 \
+      PB ieee/STD_LOGIC_UNSIGNED 1131108379
+AR work/vending/Behavioral 1263203677 FL "D:/6th semister/adld/add_lab/vend/vending.vhd" \
+      EN work/vending 1263203676

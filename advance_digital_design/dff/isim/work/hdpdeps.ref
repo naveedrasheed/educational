@@ -1,0 +1,12 @@
+V3 8
+FL H:/6S/add_lab/dff/tb.vhw 2009/12/29.10:39:37 I.24
+EN work/tb 1262065183              FL H:/6S/add_lab/dff/tb.vhw PB ieee/std_logic_1164 1132105529 \
+      LB work           PB ieee/STD_LOGIC_TEXTIO 1132105539 \
+      PB ieee/std_logic_arith 1132105531 PB ieee/STD_LOGIC_UNSIGNED 1132105537 \
+      PB std/textio 1132105521
+AR work/tb/testbench_arch 1262065184 FL H:/6S/add_lab/dff/tb.vhw EN work/tb 1262065183 CP dff \
+      PB ieee/STD_LOGIC_TEXTIO 1132105539
+FL H:/6S/add_lab/dff/dff.vhd 2009/12/06.23:38:14 I.24
+EN work/dff 1262065181             FL H:/6S/add_lab/dff/dff.vhd PB ieee/std_logic_1164 1132105529 \
+      LB work
+AR work/dff/behv 1262065182        FL H:/6S/add_lab/dff/dff.vhd EN work/dff 1262065181

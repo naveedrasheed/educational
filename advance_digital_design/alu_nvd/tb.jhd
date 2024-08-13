@@ -1,0 +1,3 @@
+MODULE tb
+SUBMODULE alu_nvd
+INSTANCE UUT

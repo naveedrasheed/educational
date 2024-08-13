@@ -1,0 +1,4 @@
+AR reg behavioral H:/6S/add_lab/register/register.vhd sub00/vhpl01 1262246040
+EN kk NULL H:/6S/add_lab/register/kk.vhw sub00/vhpl02 1262248692
+EN reg NULL H:/6S/add_lab/register/register.vhd sub00/vhpl00 1262246039
+AR kk testbench_arch H:/6S/add_lab/register/kk.vhw sub00/vhpl03 1262248693

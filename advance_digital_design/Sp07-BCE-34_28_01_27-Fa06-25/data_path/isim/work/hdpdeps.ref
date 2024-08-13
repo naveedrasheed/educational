@@ -1,0 +1,113 @@
+V3 55
+FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/alu_nvd.vhd" 2009/12/26.13:22:28 I.24
+EN work/alu_nvd 1263369254 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/alu_nvd.vhd" \
+      PB ieee/std_logic_1164 1132105529 PB ieee/std_logic_arith 1132105531 \
+      PB ieee/STD_LOGIC_UNSIGNED 1132105537
+AR work/alu_nvd/Behavioral 1263369255 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/alu_nvd.vhd" \
+      EN work/alu_nvd 1263369254 CP g_adder
+FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/mem_acc_stage.vhd" 2010/01/13.12:23:42 I.24
+EN work/mem_acc 1263369268 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/mem_acc_stage.vhd" \
+      PB ieee/std_logic_1164 1132105529 PB ieee/std_logic_arith 1132105531 \
+      PB ieee/STD_LOGIC_UNSIGNED 1132105537
+AR work/mem_acc/Behavioral 1263369269 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/mem_acc_stage.vhd" \
+      EN work/mem_acc 1263369268 CP data_memory
+FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/ins_memory.vhd" 2010/01/13.12:25:32 I.24
+EN work/inst_memory 1263369260 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/ins_memory.vhd" \
+      PB ieee/std_logic_1164 1132105529 PB ieee/std_logic_arith 1132105531 \
+      PB ieee/STD_LOGIC_UNSIGNED 1132105537
+AR work/inst_memory/Behavioral 1263369261 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/ins_memory.vhd" \
+      EN work/inst_memory 1263369260
+FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/reg_f.vhd" 2009/12/31.13:05:30 I.24
+EN work/reg_f 1263369256 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/reg_f.vhd" \
+      PB ieee/std_logic_1164 1132105529 PB ieee/std_logic_arith 1132105531 \
+      PB ieee/STD_LOGIC_UNSIGNED 1132105537
+AR work/reg_f/Behavioral 1263369257 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/reg_f.vhd" \
+      EN work/reg_f 1263369256
+FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/id_stage.vhd" 2010/01/12.11:54:30 I.24
+EN work/id_stage 1263369264 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/id_stage.vhd" \
+      PB ieee/std_logic_1164 1132105529 PB ieee/std_logic_arith 1132105531 \
+      PB ieee/STD_LOGIC_UNSIGNED 1132105537
+AR work/id_stage/Behavioral 1263369265 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/id_stage.vhd" \
+      EN work/id_stage 1263369264 CP reg_f
+FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/ex_stage.vhd" 2010/01/12.12:13:10 I.24
+EN work/ex_stage 1263369266 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/ex_stage.vhd" \
+      PB ieee/std_logic_1164 1132105529 PB ieee/std_logic_arith 1132105531 \
+      PB ieee/STD_LOGIC_UNSIGNED 1132105537
+AR work/ex_stage/Behavioral 1263369267 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/ex_stage.vhd" \
+      EN work/ex_stage 1263369266 CP alu_nvd
+FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/tb.vhw" 2010/01/13.12:57:26 I.24
+EN work/tb 1263369453              FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/tb.vhw" \
+      PB ieee/std_logic_1164 1132105529 PB ieee/std_logic_arith 1132105531 \
+      PB ieee/STD_LOGIC_UNSIGNED 1132105537 PB ieee/STD_LOGIC_TEXTIO 1132105539 \
+      PB std/textio 1132105521
+AR work/tb/testbench_arch 1263369454 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/tb.vhw" \
+      EN work/tb 1263369453 CP data_path   PB ieee/STD_LOGIC_TEXTIO 1132105539
+FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/if_stage.vhd" 2010/01/13.12:24:10 I.24
+EN work/if_stage 1263369262 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/if_stage.vhd" \
+      PB ieee/std_logic_1164 1132105529 PB ieee/std_logic_arith 1132105531 \
+      PB ieee/STD_LOGIC_UNSIGNED 1132105537
+AR work/if_stage/Behavioral 1263369263 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/if_stage.vhd" \
+      EN work/if_stage 1263369262 CP pc    CP inst_memory
+FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/wb_stage.vhd" 2010/01/12.12:24:46 I.24
+EN work/wb_stage 1263369270 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/wb_stage.vhd" \
+      PB ieee/std_logic_1164 1132105529 PB ieee/std_logic_arith 1132105531 \
+      PB ieee/STD_LOGIC_UNSIGNED 1132105537
+AR work/wb_stage/Behavioral 1263369271 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/wb_stage.vhd" \
+      EN work/wb_stage 1263369270
+FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/data_path.vhd" 2010/01/13.12:55:41 I.24
+EN work/data_path 1263369356 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/data_path.vhd" \
+      PB ieee/std_logic_1164 1132105529 PB ieee/std_logic_arith 1132105531 \
+      PB ieee/STD_LOGIC_UNSIGNED 1132105537
+AR work/data_path/Behavioral 1263369357 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/data_path.vhd" \
+      EN work/data_path 1263369356 CP if_stage CP id_stage   CP ex_stage \
+      CP mem_acc        CP wb_stage
+FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/pc.vhd" 2010/01/12.11:12:22 I.24
+EN work/pc 1263369258              FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/pc.vhd" \
+      PB ieee/std_logic_1164 1132105529 PB ieee/std_logic_arith 1132105531 \
+      PB ieee/STD_LOGIC_UNSIGNED 1132105537
+AR work/pc/Behavioral 1263369259 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/pc.vhd" \
+      EN work/pc 1263369258
+FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/full_adder.vhd" 2009/10/02.16:55:40 I.24
+EN work/full_adder 1263369248 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/full_adder.vhd" \
+      PB ieee/std_logic_1164 1132105529 PB ieee/std_logic_arith 1132105531 \
+      PB ieee/STD_LOGIC_UNSIGNED 1132105537
+AR work/full_adder/Behavioral 1263369249 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/full_adder.vhd" \
+      EN work/full_adder 1263369248
+FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/g_adder.vhd" 2009/12/06.10:39:30 I.24
+EN work/g_adder 1263369250 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/g_adder.vhd" \
+      PB ieee/std_logic_1164 1132105529 PB ieee/std_logic_arith 1132105531 \
+      PB ieee/STD_LOGIC_UNSIGNED 1132105537
+AR work/g_adder/Behavioral 1263369251 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/g_adder.vhd" \
+      EN work/g_adder 1263369250 CP full_adder
+FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/data_memory.vhd" 2010/01/13.12:22:42 I.24
+EN work/data_memory 1263369252 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/data_memory.vhd" \
+      PB ieee/std_logic_1164 1132105529 PB ieee/std_logic_arith 1132105531 \
+      PB ieee/STD_LOGIC_UNSIGNED 1132105537
+AR work/data_memory/Behavioral 1263369253 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/data_memory.vhd" \
+      EN work/data_memory 1263369252

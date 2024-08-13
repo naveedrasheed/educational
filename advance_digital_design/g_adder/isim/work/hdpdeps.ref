@@ -1,0 +1,19 @@
+V3 11
+FL H:/6S/add_lab/g_adder/g_adder.vhd 2009/12/06.10:39:29 I.24
+EN work/g_adder 1260119734         FL H:/6S/add_lab/g_adder/g_adder.vhd \
+      PB ieee/std_logic_1164 1132105529 PB ieee/std_logic_arith 1132105531 \
+      PB ieee/STD_LOGIC_UNSIGNED 1132105537
+AR work/g_adder/Behavioral 1260119735 FL H:/6S/add_lab/g_adder/g_adder.vhd EN work/g_adder 1260119734 \
+      CP full_adder
+FL H:/6S/add_lab/full_adder/full_adder.vhd 2009/10/02.16:55:40 I.24
+EN work/full_adder 1260119709      FL H:/6S/add_lab/full_adder/full_adder.vhd \
+      PB ieee/std_logic_1164 1132105529 PB ieee/std_logic_arith 1132105531 \
+      PB ieee/STD_LOGIC_UNSIGNED 1132105537
+AR work/full_adder/Behavioral 1260119710 FL H:/6S/add_lab/full_adder/full_adder.vhd \
+      EN work/full_adder 1260119709
+FL H:/6S/add_lab/g_adder/tb.vhw 2009/12/06.22:17:25 I.24
+EN work/tb 1260119850              FL H:/6S/add_lab/g_adder/tb.vhw PB ieee/std_logic_1164 1132105529 \
+      PB ieee/std_logic_arith 1132105531 PB ieee/STD_LOGIC_UNSIGNED 1132105537 \
+      PB ieee/STD_LOGIC_TEXTIO 1132105539 PB std/textio 1132105521
+AR work/tb/testbench_arch 1260119851 FL H:/6S/add_lab/g_adder/tb.vhw EN work/tb 1260119850 \
+      CP g_adder        PB ieee/STD_LOGIC_TEXTIO 1132105539

@@ -1,0 +1,10 @@
+V3 8
+FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/data_path.vhd" 2010/01/13.12:55:41 I.24
+EN work/data_path 1263369409 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/data_path.vhd" \
+      PB ieee/std_logic_1164 1131108373 PB ieee/std_logic_arith 1131108375 \
+      PB ieee/STD_LOGIC_UNSIGNED 1131108379
+AR work/data_path/Behavioral 1263369410 \
+      FL "C:/Documents and Settings/mplab.RASHID.001/Desktop/data_path/data_path.vhd" \
+      EN work/data_path 1263369409 CP if_stage CP id_stage   CP ex_stage \
+      CP mem_acc        CP wb_stage

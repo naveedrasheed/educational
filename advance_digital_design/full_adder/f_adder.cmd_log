@@ -1,0 +1,2 @@
+sch2verilog -intstyle ise -family spartan2   -w "H:/6S/add_lab/full_adder/f_adder.sch" f_adder.vf
+sch2verilog -intstyle ise -family spartan2   -w "H:/6S/add_lab/full_adder/f_adder.sch" f_adder.vf

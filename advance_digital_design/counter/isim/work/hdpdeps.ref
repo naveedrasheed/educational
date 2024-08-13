@@ -1,0 +1,11 @@
+V3 7
+FL H:/6S/add_lab/counter/tb.vhw 2009/12/29.10:49:35 I.24
+EN work/tb 1262065780              FL H:/6S/add_lab/counter/tb.vhw PB ieee/std_logic_1164 1132105529 \
+      PB ieee/STD_LOGIC_UNSIGNED 1132105537 PB ieee/STD_LOGIC_TEXTIO 1132105539 \
+      PB ieee/std_logic_arith 1132105531 PB std/textio 1132105521
+AR work/tb/testbench_arch 1262065781 FL H:/6S/add_lab/counter/tb.vhw EN work/tb 1262065780 \
+      CP counter        PB ieee/STD_LOGIC_TEXTIO 1132105539
+FL H:/6S/add_lab/counter/counter.vhd 2009/12/06.23:38:29 I.24
+EN work/counter 1262065650         FL H:/6S/add_lab/counter/counter.vhd \
+      PB ieee/std_logic_1164 1132105529 PB ieee/STD_LOGIC_UNSIGNED 1132105537
+AR work/counter/behv 1262065651    FL H:/6S/add_lab/counter/counter.vhd EN work/counter 1262065650

@@ -1,0 +1,10 @@
+     1                                  ; a program to add three using registers
+     2                                  [org 0x100]
+     3 00000000 B80500                  		mov ax,5	;load first number in ax
+     4 00000003 BB0A00                  		mov bx, 10	;load second number in bx
+     5 00000006 01D8                    		add ax,bx	;accumlate sum in ax
+     6 00000008 BB0F00                  		mov bx,15	;load third number in bx
+     7 0000000B 01D8                    		add ax,bx	;accumulate sum in ax
+     8                                  
+     9 0000000D B8004C                  		mov ax,0x4c00	;terminate program
+    10 00000010 CD21                    		int 0x21 

@@ -1,0 +1,7 @@
+V3 7
+FL $XILINX/ALU/ALU.v 2009/05/07.12:49:53 I.24
+MO work/ALU             FL $XILINX/ALU/ALU.v
+FL $XILINX/verilog/src/glbl.v 2005/11/16.15:34:44 I.24
+MO work/glbl            FL $XILINX/verilog/src/glbl.v
+FL $XILINX/ALU/test.tfw 2009/05/07.12:57:16 I.24
+MO work/test            FL $XILINX/ALU/test.tfw MI ALU

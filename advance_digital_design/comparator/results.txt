@@ -1,0 +1,2 @@
+Error at time=2000ns less=1, Expected = 0 
+1 errors found in simulation

@@ -1,0 +1,6 @@
+AR i_f behavioral "C:/Documents and Settings/MPLAB/Desktop/bcesp07/I_F/I_F.vhd" sub00/vhpl01 1258111652
+EN i_f NULL "C:/Documents and Settings/MPLAB/Desktop/bcesp07/I_F/I_F.vhd" sub00/vhpl00 1258111651
+EN i_m NULL "C:/Documents and Settings/MPLAB/Desktop/bcesp07/I_M/I_M.vhd" sub00/vhpl02 1258111656
+AR if_stage123 behavioral "C:/Documents and Settings/MPLAB/Desktop/bcesp07/IF_stage/if_stage123.vhd" sub00/vhpl05 1258115624
+EN if_stage123 NULL "C:/Documents and Settings/MPLAB/Desktop/bcesp07/IF_stage/if_stage123.vhd" sub00/vhpl04 1258115623
+AR i_m behavioral "C:/Documents and Settings/MPLAB/Desktop/bcesp07/I_M/I_M.vhd" sub00/vhpl03 1258111657

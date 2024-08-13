@@ -1,0 +1,1 @@
+xst -ise "H:/6S/add_lab/g_adder/g_adder" -intstyle ise -ifn g_adder.xst -ofn g_adder.syr

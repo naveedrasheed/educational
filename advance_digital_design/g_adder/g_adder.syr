@@ -1,0 +1,253 @@
+Release 8.1i - xst I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.44 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.44 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: g_adder.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+     4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+     5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "g_adder.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "g_adder"
+Output Format                      : NGC
+Target Device                      : xa2s50e-6-tq144
+
+---- Source Options
+Top Module Name                    : g_adder
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : lut
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100
+Add Generic Clock Buffer(BUFG)     : 4
+Register Duplication               : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Write Timing Constraints           : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : g_adder.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+safe_implementation                : No
+Optimize Instantiated Primitives   : NO
+tristate2logic                     : Yes
+use_clock_enable                   : Yes
+use_sync_set                       : Yes
+use_sync_reset                     : Yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "H:/6S/add_lab/full_adder/full_adder.vhd" in Library work.
+Entity <full_adder> compiled.
+Entity <full_adder> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "H:/6S/add_lab/g_adder/g_adder.vhd" in Library work.
+Architecture behavioral of Entity g_adder is up to date.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <g_adder> (Architecture <behavioral>).
+Entity <g_adder> analyzed. Unit <g_adder> generated.
+
+Analyzing Entity <full_adder> (Architecture <behavioral>).
+Entity <full_adder> analyzed. Unit <full_adder> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <full_adder>.
+    Related source file is "H:/6S/add_lab/full_adder/full_adder.vhd".
+    Found 1-bit xor2 for signal <$n0005> created at line 43.
+Unit <full_adder> synthesized.
+
+
+Synthesizing Unit <g_adder>.
+    Related source file is "H:/6S/add_lab/g_adder/g_adder.vhd".
+WARNING:Xst:1780 - Signal <c_in<0>> is never used or assigned.
+Unit <g_adder> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Xors                                                 : 4
+ 1-bit xor2                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Xors                                                 : 4
+ 1-bit xor2                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <g_adder> ...
+Loading device for application Rf_Device from file '2s50e.nph' in environment C:\Xilinx.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block g_adder, actual ratio is 0.
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : g_adder.ngr
+Top Level Output File Name         : g_adder
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 14
+
+Cell Usage :
+# BELS                             : 9
+#      LUT2                        : 1
+#      LUT3                        : 7
+#      LUT4                        : 1
+# IO Buffers                       : 14
+#      IBUF                        : 9
+#      OBUF                        : 5
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : xa2s50etq144-6 
+
+ Number of Slices:                       5  out of    768     0%  
+ Number of 4 input LUTs:                 9  out of   1536     0%  
+ Number of bonded IOBs:                 14  out of    102    13%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -6
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 12.731ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 33 / 5
+-------------------------------------------------------------------------
+Delay:               12.731ns (Levels of Logic = 6)
+  Source:            cin (PAD)
+  Destination:       carry (PAD)
+
+  Data Path: cin to carry
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.797   1.320  cin_IBUF (cin_IBUF)
+     LUT3:I0->O            1   0.468   0.920  middle_cell1/cout_SW0 (N12)
+     LUT3:I2->O            2   0.468   1.150  middle_cell1/cout (c_in<2>)
+     LUT3:I1->O            2   0.468   1.150  Ker01 (N01)
+     LUT3:I2->O            1   0.468   0.920  ms_cell3/sum1 (sum_3_OBUF)
+     OBUF:I->O                 4.602          sum_3_OBUF (sum<3>)
+    ----------------------------------------
+    Total                     12.731ns (7.271ns logic, 5.460ns route)
+                                       (57.1% logic, 42.9% route)
+
+=========================================================================
+CPU : 3.08 / 3.56 s | Elapsed : 4.00 / 4.00 s
+ 
+--> 
+
+Total memory usage is 98236 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

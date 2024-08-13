@@ -1,0 +1,4 @@
+EN dff NULL H:/6S/add_lab/dff/dff.vhd sub00/vhpl00 1262065181
+AR dff behv H:/6S/add_lab/dff/dff.vhd sub00/vhpl01 1262065182
+AR tb testbench_arch H:/6S/add_lab/dff/tb.vhw sub00/vhpl03 1262065184
+EN tb NULL H:/6S/add_lab/dff/tb.vhw sub00/vhpl02 1262065183

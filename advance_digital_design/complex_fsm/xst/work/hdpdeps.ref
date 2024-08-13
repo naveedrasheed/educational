@@ -1,0 +1,7 @@
+V3 3
+FL H:/6S/add_lab/complex_fsm/complex_fsm.vhd 2009/12/12.11:06:26 I.24
+EN work/complex_fsm 1262245809     FL H:/6S/add_lab/complex_fsm/complex_fsm.vhd \
+      PB ieee/std_logic_1164 1131108373 PB ieee/std_logic_arith 1131108375 \
+      PB ieee/STD_LOGIC_UNSIGNED 1131108379
+AR work/complex_fsm/Behavioral 1262245810 FL H:/6S/add_lab/complex_fsm/complex_fsm.vhd \
+      EN work/complex_fsm 1262245809

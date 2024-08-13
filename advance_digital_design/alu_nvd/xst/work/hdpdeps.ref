@@ -1,0 +1,13 @@
+V3 8
+FL H:/6S/add_lab/g_adder/g_adder.vhd 2009/12/06.10:39:29 I.24
+EN work/g_adder 1260121107         FL H:/6S/add_lab/g_adder/g_adder.vhd \
+      PB ieee/std_logic_1164 1131108373 PB ieee/std_logic_arith 1131108375 \
+      PB ieee/STD_LOGIC_UNSIGNED 1131108379
+AR work/g_adder/Behavioral 1260121108 FL H:/6S/add_lab/g_adder/g_adder.vhd EN work/g_adder 1260121107 \
+      CP full_adder
+FL H:/6S/add_lab/alu_nvd/alu_nvd.vhd 2009/12/26.13:22:27 I.24
+EN work/alu_nvd 1262275217         FL H:/6S/add_lab/alu_nvd/alu_nvd.vhd \
+      PB ieee/std_logic_1164 1131108373 PB ieee/std_logic_arith 1131108375 \
+      PB ieee/STD_LOGIC_UNSIGNED 1131108379
+AR work/alu_nvd/Behavioral 1262275218 FL H:/6S/add_lab/alu_nvd/alu_nvd.vhd EN work/alu_nvd 1262275217 \
+      CP g_adder

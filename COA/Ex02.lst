@@ -1,0 +1,20 @@
+     1                                  [ORG 0x100]
+     2                                  	
+     3 00000000 A1[1700]                	mov ax,[Num1]     ;move the first numver in ax
+     4 00000003 8B1E[1900]              	mov bx,[Num2]	  ;move the second number in bx
+     5 00000007 89D8                    	mov ax,bx	  ;add first and second numbers	
+     6 00000009 8B1E[1B00]              	mov bx,[Num3]     ;move the third number in bx
+     7 0000000D 89D8                    	mov ax,bx	  ;move the third in bx
+     8 0000000F A3[1D00]                	mov [Num4], ax    
+     9                                  	
+    10 00000012 B8004C                  	mov ax,0x4c00
+    11 00000015 CD21                    	int 0x21
+    12                                  ;execution never comes at this line
+    13 00000017 0500                    	Num1: dw 5
+    14 00000019 0A00                    	Num2: dw 10
+    15 0000001B 0F00                    	Num3: dw 15
+    16 0000001D 0000                    	Num4: dw 0
+    17                                  
+    18                                  
+    19                                  
+    20                                  	

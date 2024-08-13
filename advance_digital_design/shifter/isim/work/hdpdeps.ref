@@ -1,0 +1,11 @@
+V3 7
+FL H:/6S/add_lab/shifter/shifter.vhd 2009/12/06.23:38:25 I.24
+EN work/shift_reg 1262034360       FL H:/6S/add_lab/shifter/shifter.vhd \
+      PB ieee/std_logic_1164 1132105529
+AR work/shift_reg/behv 1262034361  FL H:/6S/add_lab/shifter/shifter.vhd EN work/shift_reg 1262034360
+FL H:/6S/add_lab/shifter/tb.vhw 2009/12/29.02:11:22 I.24
+EN work/tb 1262034687              FL H:/6S/add_lab/shifter/tb.vhw PB ieee/std_logic_1164 1132105529 \
+      PB ieee/STD_LOGIC_TEXTIO 1132105539 PB ieee/std_logic_arith 1132105531 \
+      PB ieee/STD_LOGIC_UNSIGNED 1132105537 PB std/textio 1132105521
+AR work/tb/testbench_arch 1262034688 FL H:/6S/add_lab/shifter/tb.vhw EN work/tb 1262034687 \
+      CP shift_reg      PB ieee/STD_LOGIC_TEXTIO 1132105539

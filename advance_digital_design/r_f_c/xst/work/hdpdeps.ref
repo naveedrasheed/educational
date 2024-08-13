@@ -1,0 +1,6 @@
+V3 4
+FL H:/6S/add_lab/r_f_c/r_f.vhd 2009/12/31.13:15:35 I.24
+EN work/r_f 1262247562             FL H:/6S/add_lab/r_f_c/r_f.vhd PB ieee/std_logic_1164 1131108373 \
+      PB ieee/std_logic_arith 1131108375 PB ieee/STD_LOGIC_UNSIGNED 1131108379
+AR work/r_f/Behavioral 1262247563  FL H:/6S/add_lab/r_f_c/r_f.vhd EN work/r_f 1262247562 \
+      CP reg

@@ -1,0 +1,16 @@
+1: javax.swing.Icon
+
+interface used to manipulate images
+
+
+2: javax.swing.ImageIcon
+
+load images & implements javax.swing.Icon
+
+e.g Icon bug=new ImageIcon(getClass().getResource("bug1.gif"));
+
+getClass(inherited from class Object)
+getResource()   ....returns the location of the image as URL
+
+
+3: javax.swing

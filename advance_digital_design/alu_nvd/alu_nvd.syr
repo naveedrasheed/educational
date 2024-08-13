@@ -1,0 +1,264 @@
+Release 8.1i - xst I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.11 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.11 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: alu_nvd.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+     4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+     5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "alu_nvd.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "alu_nvd"
+Output Format                      : NGC
+Target Device                      : xa2s50e-6-tq144
+
+---- Source Options
+Top Module Name                    : alu_nvd
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : lut
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100
+Add Generic Clock Buffer(BUFG)     : 4
+Register Duplication               : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Write Timing Constraints           : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : alu_nvd.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+safe_implementation                : No
+Optimize Instantiated Primitives   : NO
+tristate2logic                     : Yes
+use_clock_enable                   : Yes
+use_sync_set                       : Yes
+use_sync_reset                     : Yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "H:/6S/add_lab/g_adder/g_adder.vhd" in Library work.
+Entity <g_adder> compiled.
+Entity <g_adder> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "H:/6S/add_lab/alu_nvd/alu_nvd.vhd" in Library work.
+Architecture behavioral of Entity alu_nvd is up to date.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <alu_nvd> (Architecture <behavioral>).
+WARNING:Xst:753 - "H:/6S/add_lab/alu_nvd/alu_nvd.vhd" line 61: Unconnected output port 'carry' of component 'g_adder'.
+WARNING:Xst:753 - "H:/6S/add_lab/alu_nvd/alu_nvd.vhd" line 62: Unconnected output port 'carry' of component 'g_adder'.
+Entity <alu_nvd> analyzed. Unit <alu_nvd> generated.
+
+Analyzing generic Entity <g_adder> (Architecture <behavioral>).
+	width = 3
+
+WARNING:Xst:766 - "H:/6S/add_lab/g_adder/g_adder.vhd" line 56: Generating a Black Box for component <full_adder>.
+WARNING:Xst:766 - "H:/6S/add_lab/g_adder/g_adder.vhd" line 59: Generating a Black Box for component <full_adder>.
+WARNING:Xst:766 - "H:/6S/add_lab/g_adder/g_adder.vhd" line 62: Generating a Black Box for component <full_adder>.
+Entity <g_adder> analyzed. Unit <g_adder> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <g_adder>.
+    Related source file is "H:/6S/add_lab/g_adder/g_adder.vhd".
+WARNING:Xst:1780 - Signal <c_in<0>> is never used or assigned.
+Unit <g_adder> synthesized.
+
+
+Synthesizing Unit <alu_nvd>.
+    Related source file is "H:/6S/add_lab/alu_nvd/alu_nvd.vhd".
+    Found 3-bit 4-to-1 multiplexer for signal <output>.
+    Summary:
+	inferred   3 Multiplexer(s).
+Unit <alu_nvd> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multiplexers                                         : 1
+ 3-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multiplexers                                         : 1
+ 3-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <alu_nvd> ...
+Loading device for application Rf_Device from file '2s50e.nph' in environment C:\Xilinx.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block alu_nvd, actual ratio is 1.
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : alu_nvd.ngr
+Top Level Output File Name         : alu_nvd
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 11
+
+Cell Usage :
+# BELS                             : 14
+#      GND                         : 1
+#      INV                         : 3
+#      LUT3                        : 6
+#      MUXF5                       : 3
+#      VCC                         : 1
+# IO Buffers                       : 11
+#      IBUF                        : 8
+#      OBUF                        : 3
+# Others                           : 6
+#      full_adder                  : 6
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : xa2s50etq144-6 
+
+ Number of Slices:                       3  out of    768     0%  
+ Number of 4 input LUTs:                 6  out of   1536     0%  
+ Number of bonded IOBs:                 11  out of    102    10%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -6
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 9.059ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 37 / 19
+-------------------------------------------------------------------------
+Delay:               9.059ns (Levels of Logic = 4)
+  Source:            op<0> (PAD)
+  Destination:       output<2> (PAD)
+
+  Data Path: op<0> to output<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   0.797   1.850  op_0_IBUF (op_0_IBUF)
+     LUT3:I0->O            1   0.468   0.000  op<0>5 (mux_1_N7)
+     MUXF5:I0->O           1   0.422   0.920  Mmux_output_output<0>_output<0>_rn_0 (output_2_OBUF)
+     OBUF:I->O                 4.602          output_2_OBUF (output<2>)
+    ----------------------------------------
+    Total                      9.059ns (6.289ns logic, 2.770ns route)
+                                       (69.4% logic, 30.6% route)
+
+=========================================================================
+CPU : 2.39 / 2.52 s | Elapsed : 2.00 / 2.00 s
+ 
+--> 
+
+Total memory usage is 98236 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

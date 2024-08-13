@@ -1,0 +1,5 @@
+V3 3
+FL H:/6S/add_lab/counter/counter.vhd 2009/12/06.23:38:29 I.24
+EN work/counter 1262065639         FL H:/6S/add_lab/counter/counter.vhd \
+      PB ieee/std_logic_1164 1131108373 PB ieee/STD_LOGIC_UNSIGNED 1131108379
+AR work/counter/behv 1262065640    FL H:/6S/add_lab/counter/counter.vhd EN work/counter 1262065639

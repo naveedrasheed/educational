@@ -1,0 +1,106 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2003 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.1i
+//  \   \         Application : ISE
+//  /   /         Filename : test.ant
+// /___/   /\     Timestamp : Thu May 07 12:57:16 2009
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: test
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module test;
+    reg clk = 1'b0;
+    reg [31:0] alu_scrA = 32'b00000000000000000000000000000000;
+    reg [31:0] alu_scrB = 32'b00000000000000000000000000000000;
+    reg [1:0] aluctrl = 2'b00;
+    wire [31:0] alu_result;
+    wire zero;
+
+    parameter PERIOD = 200;
+    parameter real DUTY_CYCLE = 0.5;
+    parameter OFFSET = 0;
+
+    initial    // Clock process for clk
+    begin
+        #OFFSET;
+        forever
+        begin
+            clk = 1'b0;
+            #(PERIOD-(PERIOD*DUTY_CYCLE)) clk = 1'b1;
+            #(PERIOD*DUTY_CYCLE);
+        end
+    end
+
+    ALU UUT (
+        .clk(clk),
+        .alu_scrA(alu_scrA),
+        .alu_scrB(alu_scrB),
+        .aluctrl(aluctrl),
+        .alu_result(alu_result),
+        .zero(zero));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin    // Annotation process for clock clk
+        #0;
+        ANNOTATE_alu_result;
+        ANNOTATE_zero;
+        #OFFSET;
+        forever begin
+            #115;
+            ANNOTATE_alu_result;
+            ANNOTATE_zero;
+            #85;
+        end
+    end
+
+    initial begin  // Open the annotations file...
+        TX_FILE = $fopen("C:\\Xilinx\\ALU\\test.ano");
+        #1200 // Final time:  1200 ns
+        $display("Success! Annotation Simulation Complete.");
+        $fdisplay(TX_FILE, "Total[%d]", TX_ERROR);
+        $fclose(TX_FILE);
+        $finish;
+    end
+
+    initial begin
+        // -------------  Current Time:  85ns
+        #85;
+        alu_scrA = 32'b00000000000000000000000000000101;
+        aluctrl = 2'b11;
+        // -------------------------------------
+        // -------------  Current Time:  285ns
+        #200;
+        alu_scrB = 32'b00000000000000000000000000000100;
+        // -------------------------------------
+    end
+
+    task ANNOTATE_alu_result;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,alu_result,%b]", $time, alu_result);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_zero;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,zero,%b]", $time, zero);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+endmodule
+

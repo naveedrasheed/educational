@@ -1,0 +1,3 @@
+MODULE tbbb
+SUBMODULE memory
+INSTANCE UUT

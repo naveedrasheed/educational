@@ -1,0 +1,6 @@
+V3 3
+FL $XILINX/bcesp07/d_latch/d_latch.vhd 2009/10/05.11:44:48 I.24
+EN work/d_latch 1254725568         FL $XILINX/bcesp07/d_latch/d_latch.vhd \
+      PB ieee/std_logic_1164 1131108373 PB ieee/std_logic_arith 1131108375 \
+      PB ieee/STD_LOGIC_UNSIGNED 1131108379
+AR work/d_latch/Behavioral 1254725569 FL $XILINX/bcesp07/d_latch/d_latch.vhd EN work/d_latch 1254725568

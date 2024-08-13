@@ -1,0 +1,3 @@
+MODULE tb
+SUBMODULE data_path
+INSTANCE UUT

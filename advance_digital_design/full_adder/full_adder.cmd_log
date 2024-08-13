@@ -1,0 +1,5 @@
+xst -ise "H:/6S/add_lab/full_adder/full_adder" -intstyle ise -ifn full_adder.xst -ofn full_adder.syr
+ngdbuild -ise "H:/6S/add_lab/full_adder/full_adder" -intstyle ise -dd _ngo -nt timestamp -i -p xc2s50-pq208-6 full_adder.ngc full_adder.ngd
+map -ise "H:/6S/add_lab/full_adder/full_adder" -intstyle ise -p xc2s50-pq208-6 -cm area -pr b -k 4 -c 100 -tx off -o full_adder_map.ncd full_adder.ngd full_adder.pcf
+par -ise "H:/6S/add_lab/full_adder/full_adder" -w -intstyle ise -ol std -t 1 full_adder_map.ncd full_adder.ncd full_adder.pcf
+trce -ise "H:/6S/add_lab/full_adder/full_adder" -intstyle ise -e 3 -l 3 -s 6 -xml full_adder full_adder.ncd -o full_adder.twr full_adder.pcf

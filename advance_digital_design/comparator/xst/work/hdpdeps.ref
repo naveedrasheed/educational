@@ -1,0 +1,6 @@
+V3 3
+FL H:/6S/add_lab/comparator/comparator.vhd 2009/12/06.23:37:57 I.24
+EN work/Comparator 1262065884      FL H:/6S/add_lab/comparator/comparator.vhd \
+      PB ieee/std_logic_1164 1131108373
+AR work/Comparator/behv 1262065885 FL H:/6S/add_lab/comparator/comparator.vhd \
+      EN work/Comparator 1262065884
